@@ -1,2 +1,3 @@
 # VR Tutorial
-## first class: Roll a Ball
+* Class
+** first class: Roll a Ball
