@@ -169,9 +169,6 @@ void OnTriggerEnter(Collider other) // OnTriggerEnter會偵測物體碰觸到其
 ```
 
 > 點選Prefabs檔案夾內的pickup，並在Tag欄位點選Add Tags，新增一個Pick UP(要和PlayerController.cs內寫的一樣)，最後將Box Collider的Is Trigger點選，進入遊玩時，player碰到pickup便會使pickup消失
-<p align="left">
-    <img src="https://github.com/brianchung0803/My_VR_adventure/blob/master/images/game%20play.png?raw=true" alt="Sample"  width="550" height="350">
-</p>
 
 > 因為pickup在Unity內是存成static collider，而這些static collider在scene中會存成一個cashe，因為static collider理論上不會動，所以cashe不會更新，但是因為我們讓pickup每一偵都會旋轉，故cashe會不斷更新，造成運算浪費。要解決此問題只要將pickup增加Rigidbody，pickup便會被視為dynamic collider，增加Rigidbody後，將Use Gravity取消，並勾選Is Kinematic。
 
